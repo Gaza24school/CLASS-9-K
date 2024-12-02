@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول صف تاسع ك</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #f39c12;
+            text-shadow: 2px 2px 5px rgba(255, 165, 0, 0.6);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 2px 2px 5px rgba(255, 165, 0, 0.6);
+            }
+            100% {
+                text-shadow: 4px 4px 20px rgba(255, 165, 0, 1);
+            }
+        }
+
+        .btn {
+            margin: 15px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #34495e;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #1abc9c;
+            transform: scale(1.1);
+            box-shadow: 4px 4px 15px rgba(0, 255, 127, 0.6);
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2c3e50;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            text-align: left;
+            direction: rtl;
+        }
+
+        .output a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        .output a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>جدول صف تاسع ك مع الروابط BY OMER ABO AKER 🔥</h1>
+
+    <button class="btn" onclick="showContent('sunday')">جدول وروابط يوم الأحد</button>
+    <button class="btn" onclick="showContent('monday')">جدول وروابط يوم الاثنين</button>
+    <button class="btn" onclick="showContent('tuesday')">جدول وروابط يوم الثلاثاء</button>
+    <button class="btn" onclick="showContent('wednesday')">جدول وروابط يوم الأربعاء</button>
+    <button class="btn" onclick="showContent('thursday')">جدول وروابط يوم الخميس</button>
+
+    <div id="output" class="output"></div>
+
+    <script>
+        const schedules = {
+            sunday: `
+                <p>الحصة الأولى تكنولوجيا هي الرابط: <a href="https://2u.pw/QzSLr8oc" target="_blank">https://2u.pw/QzSLr8oc</a></p>
+                <p>الحصة الثانية عربي هي الرابط: <a href="https://2u.pw/mv1cOM0K" target="_blank">https://2u.pw/mv1cOM0K</a></p>
+                <p>الثالثة علوم هي الرابط: <a href="https://tinyurl.com/6ru5vrh8" target="_blank">https://tinyurl.com/6ru5vrh8</a></p>
+                <p>الرابعة انجليزي هي الرابط: <a href="https://2u.pw/Bf3LtvgE" target="_blank">https://2u.pw/Bf3LtvgE</a></p>
+                <p>الخامسة رياضيات هي الرابط: <a href="https://2u.pw/RjWJhNfW" target="_blank">https://2u.pw/RjWJhNfW</a></p>
+            `,
+            monday: `
+                <p>الأولى دين: <a href="https://urlshort.app/HIEBNO" target="_blank">https://urlshort.app/HIEBNO</a></p>
+                <p>الثانية رياضيات: <a href="https://2u.pw/RjWJhNfW" target="_blank">https://2u.pw/RjWJhNfW</a></p>
+                <p>الثالثة انجليزي: <a href="https://2u.pw/Bf3LtvgE" target="_blank">https://2u.pw/Bf3LtvgE</a></p>
+                <p>الرابعة عربي: <a href="https://2u.pw/mv1cOM0K" target="_blank">https://2u.pw/mv1cOM0K</a></p>
+                <p>الخامسة علوم: <a href="https://tinyurl.com/6ru5vrh8" target="_blank">https://tinyurl.com/6ru5vrh8</a></p>
+            `,
+            tuesday: `
+                <p>الأولى فراغ</p>
+                <p>الثانية دراسات: <a href="https://urlshort.app/EAZI8J" target="_blank">https://urlshort.app/EAZI8J</a></p>
+                <p>الثالثة انجليزي: <a href="https://2u.pw/Bf3LtvgE" target="_blank">https://2u.pw/Bf3LtvgE</a></p>
+                <p>الرابعة عربي: <a href="https://2u.pw/mv1cOM0K" target="_blank">https://2u.pw/mv1cOM0K</a></p>
+            `,
+            wednesday: `
+                <p>الأولى الرياضيات: <a href="https://2u.pw/RjWJhNfW" target="_blank">https://2u.pw/RjWJhNfW</a></p>
+                <p>الثانية انجليزي: <a href="https://2u.pw/Bf3LtvgE" target="_blank">https://2u.pw/Bf3LtvgE</a></p>
+                <p>الثالثة دين: <a href="https://urlshort.app/HIEBNO" target="_blank">https://urlshort.app/HIEBNO</a></p>
+                <p>الرابعة عربي: <a href="https://2u.pw/mv1cOM0K" target="_blank">https://2u.pw/mv1cOM0K</a></p>
+            `,
+            thursday: `
+                <p>الأولى تكنولوجيا: <a href="https://2u.pw/QzSLr8oc" target="_blank">https://2u.pw/QzSLr8oc</a></p>
+                <p>الثانية عربي: <a href="https://2u.pw/mv1cOM0K" target="_blank">https://2u.pw/mv1cOM0K</a></p>
+                <p>الثالثة دراسات: <a href="https://urlshort.app/EAZI8J" target="_blank">https://urlshort.app/EAZI8J</a></p>
+                <p>الرابعة علوم: <a href="https://tinyurl.com/6ru5vrh8" target="_blank">https://tinyurl.com/6ru5vrh8</a></p>
+                <p>الخامسة رياضيات: <a href="https://2u.pw/RjWJhNfW" target="_blank">https://2u.pw/RjWJhNfW</a></p>
+            `
+        };
+
+        function showContent(day) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = schedules[day];
+            outputDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
